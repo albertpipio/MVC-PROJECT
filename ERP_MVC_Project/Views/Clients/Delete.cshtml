@@ -1,0 +1,48 @@
+﻿@model Client
+
+<form method="post" asp-action="Delete">
+
+	<input asp-for="Id" hidden /
+	>
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Delete Client</h2>
+			<hr />
+		</div>
+		@*@*<div asp-validation-summary="All"></div>*@
+		<div class="mb-3">
+			<label asp-for="Name"></label>
+			<input asp-for="Name" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Email"></label>
+			<input asp-for="Email" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Cif"></label>
+			<input asp-for="Cif" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Address"></label>
+			<input asp-for="Address" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="Phone"></label>
+			<input asp-for="Phone" disabled class="form-control" />
+		</div>
+		<div class="mb-3">
+			<label asp-for="CompletedOrders"></label>
+			<input asp-for="CompletedOrders" disabled class="form-control" />
+		</div>
+		<button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+		<a asp-controller="Clients" asp-action="Index" class="btn btn-info" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}
